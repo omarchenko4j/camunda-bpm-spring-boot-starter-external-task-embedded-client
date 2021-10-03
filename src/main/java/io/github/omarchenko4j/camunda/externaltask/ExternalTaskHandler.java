@@ -1,6 +1,12 @@
 package io.github.omarchenko4j.camunda.externaltask;
 
+import io.github.omarchenko4j.camunda.annotation.ExternalTaskTopicName;
+import org.apache.commons.lang3.NotImplementedException;
 import org.camunda.bpm.engine.externaltask.ExternalTask;
+import org.springframework.core.annotation.AnnotationUtils;
+
+import static java.util.Objects.nonNull;
+import static org.apache.commons.lang3.StringUtils.isBlank;
 
 /**
  * An interface for a custom implementation of a handler that is called for an external task by topic name.
@@ -13,7 +19,20 @@ public interface ExternalTaskHandler {
      *
      * @return topic name for the external task
      */
-    String topicName();
+    default String topicName() {
+        ExternalTaskTopicName externalTaskTopicName =
+                AnnotationUtils.findAnnotation(getClass(), ExternalTaskTopicName.class);
+        if (nonNull(externalTaskTopicName)) {
+            String topicName = externalTaskTopicName.value();
+            if (isBlank(topicName)) {
+                throw new IllegalArgumentException("Topic name must not be empty");
+            }
+            return topicName;
+        }
+        else {
+            throw new NotImplementedException("Implement this method or provide an @ExternalTaskTopicName annotation");
+        }
+    }
 
     /**
      * Executes the logic for handling an external task from Camunda.
