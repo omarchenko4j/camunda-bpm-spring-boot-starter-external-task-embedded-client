@@ -22,11 +22,8 @@
 
   <scm>
     <url>https://github.com/omarchenko4j/camunda-spring-boot-starter-embedded-external-task-handler</url>
-    <connection>scm:git:git@github.com:omarchenko4j/camunda-spring-boot-starter-embedded-external-task-handler.git
-    </connection>
-    <developerConnection>
-      scm:git:git@github.com:omarchenko4j/camunda-spring-boot-starter-embedded-external-task-handler
-    </developerConnection>
+    <connection>scm:git:git@github.com:omarchenko4j/camunda-spring-boot-starter-embedded-external-task-handler.git</connection>
+    <developerConnection>scm:git:git@github.com:omarchenko4j/camunda-spring-boot-starter-embedded-external-task-handler</developerConnection>
   </scm>
 
   <issueManagement>
@@ -46,6 +43,25 @@
       <timezone>+3</timezone>
     </developer>
   </developers>
+
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-dependencies</artifactId>
+        <version>2.3.10.RELEASE</version>
+        <scope>import</scope>
+        <type>pom</type>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter</artifactId>
+    </dependency>
+  </dependencies>
 
   <build>
     <plugins>
