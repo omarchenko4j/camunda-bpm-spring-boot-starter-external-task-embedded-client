@@ -1,2 +1,2 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-  io.github.omarchenko4j.camunda.configuration.CamundaExternalTaskHandlerAutoConfiguration
+  io.github.omarchenko4j.camunda.configuration.ExternalTaskHandlerAutoConfiguration
