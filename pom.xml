@@ -12,6 +12,41 @@
   <description>Spring Boot Starter for embedded Camunda for fast handling of external tasks.</description>
   <url>https://github.com/omarchenko4j/camunda-spring-boot-starter-embedded-external-task-handler</url>
 
+  <licenses>
+    <license>
+      <name>The Apache Software License, Version 2.0</name>
+      <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
+
+  <scm>
+    <url>https://github.com/omarchenko4j/camunda-spring-boot-starter-embedded-external-task-handler</url>
+    <connection>scm:git:git@github.com:omarchenko4j/camunda-spring-boot-starter-embedded-external-task-handler.git
+    </connection>
+    <developerConnection>
+      scm:git:git@github.com:omarchenko4j/camunda-spring-boot-starter-embedded-external-task-handler
+    </developerConnection>
+  </scm>
+
+  <issueManagement>
+    <system>GitHub</system>
+    <url>https://github.com/omarchenko4j/camunda-spring-boot-starter-embedded-external-task-handler/issues</url>
+  </issueManagement>
+
+  <developers>
+    <developer>
+      <id>omarchenko</id>
+      <name>Oleg Marchenko</name>
+      <email>omarchenko.150@gmail.com</email>
+      <roles>
+        <role>architect</role>
+        <role>developer</role>
+      </roles>
+      <timezone>+3</timezone>
+    </developer>
+  </developers>
+
   <build>
     <plugins>
       <plugin>
