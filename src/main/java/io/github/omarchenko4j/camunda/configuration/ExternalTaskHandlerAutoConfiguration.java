@@ -1,5 +1,6 @@
 package io.github.omarchenko4j.camunda.configuration;
 
+import io.github.omarchenko4j.camunda.event.ExternalTaskCreatedEventHandler;
 import io.github.omarchenko4j.camunda.externaltask.ExternalTaskHandler;
 import io.github.omarchenko4j.camunda.externaltask.ExternalTaskHandlerRegistry;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
@@ -15,7 +16,13 @@ import java.util.Collection;
 public class ExternalTaskHandlerAutoConfiguration {
     @Bean
     @ConditionalOnBean(ExternalTaskHandler.class)
-    public ExternalTaskHandlerRegistry camundaExternalTaskCreatedEventHandler(Collection<ExternalTaskHandler> externalTaskHandlers) {
+    public ExternalTaskHandlerRegistry externalTaskCreatedEventHandler(Collection<ExternalTaskHandler> externalTaskHandlers) {
         return new ExternalTaskHandlerRegistry(externalTaskHandlers);
+    }
+
+    @Bean
+    @ConditionalOnBean(ExternalTaskHandlerRegistry.class)
+    public ExternalTaskCreatedEventHandler externalTaskCreatedEventHandler(ExternalTaskHandlerRegistry externalTaskHandlerRegistry) {
+        return new ExternalTaskCreatedEventHandler(externalTaskHandlerRegistry);
     }
 }
