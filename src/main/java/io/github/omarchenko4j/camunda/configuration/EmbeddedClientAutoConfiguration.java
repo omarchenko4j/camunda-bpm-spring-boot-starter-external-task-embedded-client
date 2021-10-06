@@ -13,7 +13,7 @@ import java.util.Collection;
  * @author Oleg Marchenko
  */
 @Configuration
-public class ExternalTaskHandlerAutoConfiguration {
+public class EmbeddedClientAutoConfiguration {
     @Bean
     @ConditionalOnBean(ExternalTaskHandler.class)
     public ExternalTaskHandlerRegistry externalTaskCreatedEventHandler(Collection<ExternalTaskHandler> externalTaskHandlers) {
