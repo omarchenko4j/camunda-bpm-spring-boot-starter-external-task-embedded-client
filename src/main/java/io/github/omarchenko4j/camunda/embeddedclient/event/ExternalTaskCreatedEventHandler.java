@@ -1,8 +1,8 @@
-package io.github.omarchenko4j.camunda.event;
+package io.github.omarchenko4j.camunda.embeddedclient.event;
 
-import io.github.omarchenko4j.camunda.externaltask.ExternalTaskHandler;
-import io.github.omarchenko4j.camunda.externaltask.ExternalTaskHandlerRegistry;
-import io.github.omarchenko4j.camunda.externaltask.ExternalTaskInformation;
+import io.github.omarchenko4j.camunda.embeddedclient.externaltask.ExternalTaskHandler;
+import io.github.omarchenko4j.camunda.embeddedclient.externaltask.ExternalTaskHandlerRegistry;
+import io.github.omarchenko4j.camunda.embeddedclient.externaltask.ExternalTaskInformation;
 import org.camunda.bpm.engine.impl.history.event.HistoricExternalTaskLogEntity;
 import org.camunda.bpm.engine.impl.history.event.HistoryEvent;
 import org.camunda.bpm.engine.impl.history.handler.HistoryEventHandler;

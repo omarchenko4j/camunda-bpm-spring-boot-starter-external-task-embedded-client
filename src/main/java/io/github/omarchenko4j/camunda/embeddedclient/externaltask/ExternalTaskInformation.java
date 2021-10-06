@@ -1,4 +1,4 @@
-package io.github.omarchenko4j.camunda.externaltask;
+package io.github.omarchenko4j.camunda.embeddedclient.externaltask;
 
 import org.camunda.bpm.engine.externaltask.ExternalTask;
 import org.camunda.bpm.engine.impl.history.event.HistoricExternalTaskLogEntity;

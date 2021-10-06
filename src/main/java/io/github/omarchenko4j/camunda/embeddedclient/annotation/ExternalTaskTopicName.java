@@ -1,4 +1,4 @@
-package io.github.omarchenko4j.camunda.annotation;
+package io.github.omarchenko4j.camunda.embeddedclient.annotation;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.Target;

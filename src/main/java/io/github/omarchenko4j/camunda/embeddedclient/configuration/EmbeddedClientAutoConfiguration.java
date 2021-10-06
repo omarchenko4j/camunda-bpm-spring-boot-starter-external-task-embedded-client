@@ -1,8 +1,8 @@
-package io.github.omarchenko4j.camunda.configuration;
+package io.github.omarchenko4j.camunda.embeddedclient.configuration;
 
-import io.github.omarchenko4j.camunda.event.ExternalTaskCreatedEventHandler;
-import io.github.omarchenko4j.camunda.externaltask.ExternalTaskHandler;
-import io.github.omarchenko4j.camunda.externaltask.ExternalTaskHandlerRegistry;
+import io.github.omarchenko4j.camunda.embeddedclient.event.ExternalTaskCreatedEventHandler;
+import io.github.omarchenko4j.camunda.embeddedclient.externaltask.ExternalTaskHandler;
+import io.github.omarchenko4j.camunda.embeddedclient.externaltask.ExternalTaskHandlerRegistry;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

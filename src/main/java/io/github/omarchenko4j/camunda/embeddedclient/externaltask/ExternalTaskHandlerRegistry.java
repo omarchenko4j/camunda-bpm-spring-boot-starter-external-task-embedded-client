@@ -1,4 +1,4 @@
-package io.github.omarchenko4j.camunda.externaltask;
+package io.github.omarchenko4j.camunda.embeddedclient.externaltask;
 
 import java.util.Collection;
 import java.util.Map;

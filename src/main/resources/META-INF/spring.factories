@@ -1,2 +1,2 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-  io.github.omarchenko4j.camunda.configuration.EmbeddedClientAutoConfiguration
+  io.github.omarchenko4j.camunda.embeddedclient.configuration.EmbeddedClientAutoConfiguration

@@ -1,6 +1,6 @@
-package io.github.omarchenko4j.camunda.externaltask;
+package io.github.omarchenko4j.camunda.embeddedclient.externaltask;
 
-import io.github.omarchenko4j.camunda.annotation.ExternalTaskTopicName;
+import io.github.omarchenko4j.camunda.embeddedclient.annotation.ExternalTaskTopicName;
 import org.apache.commons.lang3.NotImplementedException;
 import org.camunda.bpm.engine.externaltask.ExternalTask;
 import org.springframework.core.annotation.AnnotationUtils;
