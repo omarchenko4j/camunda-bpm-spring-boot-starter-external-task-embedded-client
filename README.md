@@ -10,16 +10,6 @@ It works on top of thrown *historical events* to avoid long polling when using t
 
 ## Getting Started
 
-### Requirement
-
-For the embedded client to work correctly, the history level must be set to **FULL**!
-
-```yaml
-camunda:
-  bpm:
-    history-level: FULL
-```
-
 ### Dependency
 
 #### Maven:
