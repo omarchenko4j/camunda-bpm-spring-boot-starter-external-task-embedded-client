@@ -6,7 +6,7 @@
 
   <groupId>io.github.omarchenko4j</groupId>
   <artifactId>camunda-bpm-spring-boot-starter-external-task-embedded-client</artifactId>
-  <version>0.3.0-SNAPSHOT</version>
+  <version>0.3.0</version>
 
   <name>camunda-bpm-spring-boot-starter-external-task-embedded-client</name>
   <description>Spring Boot Starter provides embedded client to fast handling of external tasks for Camunda BPM.</description>
