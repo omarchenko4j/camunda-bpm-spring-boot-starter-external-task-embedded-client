@@ -17,13 +17,13 @@ It works on top of thrown *historical events* to avoid long polling when using t
 <dependency>
   <groupId>io.github.omarchenko4j</groupId>
   <artifactId>camunda-bpm-spring-boot-starter-external-task-embedded-client</artifactId>
-  <version>0.2.0</version>
+  <version>0.3.0</version>
 </dependency>
 ```
 
 #### Gradle:
 ```groovy
-compile("io.github.omarchenko4j:camunda-bpm-spring-boot-starter-external-task-embedded-client:0.2.0")
+compile("io.github.omarchenko4j:camunda-bpm-spring-boot-starter-external-task-embedded-client:0.3.0")
 ```
 
 ### Example
