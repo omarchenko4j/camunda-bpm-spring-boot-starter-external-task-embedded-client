@@ -5,7 +5,7 @@ import org.camunda.bpm.engine.externaltask.ExternalTask;
 /**
  * The class allows executing logic after locking an external task from Camunda.
  * For correct operation, you must provide the worker ID and the lock duration.
- * <br />It must be extending by class that is <strong>Spring bean</strong>
+ * <br>It must be extending by class that is <strong>Spring bean</strong>
  * and annotated {@link io.github.omarchenko4j.camunda.embeddedclient.annotation.ExternalTaskTopicName}.
  *
  * @author Oleg Marchenko

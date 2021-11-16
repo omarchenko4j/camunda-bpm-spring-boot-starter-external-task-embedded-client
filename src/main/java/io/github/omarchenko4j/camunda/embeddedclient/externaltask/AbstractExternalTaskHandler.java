@@ -6,7 +6,7 @@ import org.springframework.context.annotation.Lazy;
 
 /**
  * Base class for handling external tasks that provides access to {@link ExternalTaskService}.
- * <br />It must be extending by class that is <strong>Spring bean</strong>
+ * <br>It must be extending by class that is <strong>Spring bean</strong>
  * and annotated {@link io.github.omarchenko4j.camunda.embeddedclient.annotation.ExternalTaskTopicName}.
  *
  * @author Oleg Marchenko

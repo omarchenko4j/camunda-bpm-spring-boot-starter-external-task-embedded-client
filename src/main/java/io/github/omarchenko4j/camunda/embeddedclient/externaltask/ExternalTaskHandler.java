@@ -10,7 +10,7 @@ import static org.apache.commons.lang3.StringUtils.isBlank;
 
 /**
  * An interface for a custom implementation of a handler that is called for an external task by topic name.
- * <br />It must be implemented by class that is <strong>Spring bean</strong>
+ * <br>It must be implemented by class that is <strong>Spring bean</strong>
  * and annotated {@link ExternalTaskTopicName}.
  *
  * @author Oleg Marchenko
