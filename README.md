@@ -32,29 +32,59 @@ compile("io.github.omarchenko4j:camunda-bpm-spring-boot-starter-external-task-em
 
 ![alt text](https://camunda.com/wp-content/uploads/2021/03/Screenshot-2021-03-30-at-10.49.49-1024x463.png)
 
-2. Implement external task handler:
+2. Implement external task handlers:
 
+2.1 With manually locking and completing an external task:
 ```java
+@Slf4j
 @Component
 @ExternalTaskTopicName("scoreProvider") // Specifies the topic name of external task.
-public class ScoreProviderExternalTaskHandler implements ExternalTaskHandler {
-    private ExternalTaskService externalTaskService;
-
-    @Lazy // Prevents circular dependency.
-    @Autowired
-    public void setExternalTaskService(ExternalTaskService externalTaskService) {
-        this.externalTaskService = externalTaskService;
-    }
-
+public class ScoreProviderExternalTaskHandler extends AbstractExternalTaskHandler {
     @Override
     public void handle(ExternalTask externalTask) {
         String externalTaskId = externalTask.getId();
         
         externalTaskService.lock(externalTaskId, "WORKER", TimeUnit.SECONDS.toMillis(5)); // Manual lock.
         
-        // Some logic of score provider.
+        log.info("Some logic of score provider.");
         
         externalTaskService.complete(externalTaskId, "WORKER"); // Manual complete.
+    }
+}
+```
+
+2.2 Without manually locking but with manually completing an external task:
+```java
+@Slf4j
+@Component
+@ExternalTaskTopicName("loanGranter")
+public class LoanGranterExternalTaskHandler extends ExternalTaskLockingHandler {
+    public LoanGranterExternalTaskHandler() {
+        super("WORKER", TimeUnit.SECONDS.toMillis(5));
+    }
+    
+    @Override
+    protected void handleAfterLocking(ExternalTask externalTask) {
+        log.info("Some logic of loan granter.");
+        
+        externalTaskService.complete(externalTask.getId(), workerId); // Manual complete.
+    }
+}
+```
+
+2.3 Without manually locking and completing an external task:
+```java
+@Slf4j
+@Component
+@ExternalTaskTopicName("requestRejecter")
+public class RequestRejecterExternalTaskHandler extends ExternalTaskCompletingHandler {
+    public RequestRejecterExternalTaskHandler() {
+        super("WORKER", TimeUnit.SECONDS.toMillis(5));
+    }
+    
+    @Override
+    protected void handleBeforeCompleting(ExternalTask externalTask) {
+        log.info("Some logic of request rejecter.");
     }
 }
 ```
